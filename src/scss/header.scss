@@ -1,0 +1,71 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+  gap: 16px;
+  width: 100%;
+  background-color: $white;
+  @media (min-width: 320px) {
+    padding: 0 16px;
+  }
+  @media (min-width: 768px) {
+    padding: 0 24px;
+  }
+  @media (min-width: 1366px) {
+    display: none;
+  }
+}
+
+.header .btn:nth-child(3),
+.header .btn:nth-child(4),
+.header .btn:nth-child(5) {
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+  }
+}
+
+.header__group {
+  @media (min-width: 320px) {
+    margin-right: auto;
+  }
+  @media (min-width: 768px) {
+    margin-right: auto;
+    margin-left: 27px;
+  }
+  &::before {
+    @media (min-width: 320px) {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 28px;
+      left: 84px;
+      width: 2px;
+      height: 32px;
+      background-color: $greyLight;
+      content: '';
+    }
+  }
+}
+
+.header__repair::before {
+  position: absolute;
+  top: 28px;
+  left: 59%;
+  width: 2px;
+  height: 32px;
+  background-color: $greyLight;
+  content: '';
+  @media (min-width: 768px) {
+    right: 140px;
+    left: auto;
+  }
+}
+.header__repair {
+  @media (min-width: 768px) {
+    margin-left: 24px;
+  }
+}

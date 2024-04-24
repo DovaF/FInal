@@ -1,0 +1,234 @@
+.services {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 32px;
+  padding: 0 16px;
+  padding-right: 0;
+  padding-bottom: 24px;
+  row-gap: 16px;
+  height: auto;
+  background-color: $whiteDirt;
+  box-shadow: inset 0px -1px 0 0 $lazureLight;
+  @media (min-width: 768px) {
+    padding-left: 24px;
+    padding-bottom: 32px;
+    row-gap: 32px;
+    column-gap: 48px;
+  }
+  @media (min-width: 1120px) {
+    padding-left: 33px;
+    padding-bottom: 51px;
+    row-gap: 8px;
+    column-gap: 48px;
+  }
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    background-color: $lazureLight;
+    z-index: 11;
+    @media (min-width: 1366px) {
+      display: none;
+    }
+  }
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+  margin-top: 24px;
+  padding: 8px 0;
+  .title__btn {
+    display: none;
+  }
+  .title__img {
+    border-radius: 50%;
+  }
+  .title__btn:hover {
+    cursor: pointer;
+    .title__img {
+      box-shadow: 0 0 3px 2px $lazure;
+    }
+  }
+  @media (min-width: 1366px) {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    width: 100%;
+    padding-right: 30px;
+    column-gap: 32px;
+    .title__btn {
+      display: flex;
+      width: 173px;
+      gap: 8px;
+      &:first-child {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 24px;
+    left: -4px;
+    @media (min-width: 1366px) {
+      top: 42px;
+      width: 4px;
+      left: 2px;
+    }
+    border-radius: 20px;
+    width: 8px;
+    height: 40px;
+    background-color: $lazure;
+    content: '';
+  }
+  .btn__textContent {
+    display: none;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    @media (min-width: 1366px) {
+      display: block;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 40px;
+  width: 100%;
+  color: $grey;
+  @media (min-width: 1120px) {
+    height: 80px;
+    flex-wrap: wrap;
+    column-gap: 10px;
+  }
+}
+.menu__button {
+  text-wrap: nowrap;
+  padding: 8px 16px;
+  border-radius: 10px;
+  vertical-align: middle;
+  height: 40px;
+  &:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px $lazureWhite;
+    background-color: $white;
+  }
+}
+
+.article {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  margin-right: 16px;
+  font-weight: 400;
+  color: $black;
+  width: auto;
+  @media (min-width: 768px) {
+    width: 40.625%;
+    line-height: 20px;
+    margin: 0;
+    row-gap: 10px;
+
+  }
+  @media (min-width: 1120px) {
+    width: 490px;
+    margin: 0;
+    row-gap: 14px;
+    height: 198px;
+  }
+  // .article__second {
+  //   // @media (min-width: 768px) {
+  //   //   display: block;
+  //   // }
+  // }
+  // .article__third {
+  //   // @media (min-width: 1120px) {
+  //   //   display: inline;
+  //   // }
+  // }
+
+  .article__container {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    gap: 16px;
+    @media (min-width: 768px) {
+      height: 160px;
+    }
+    height: 90px;
+    overflow: hidden;
+  }
+}
+
+.article__container__more {
+  height: auto !important;
+}
+.readmore {
+  font-size: 16px;
+  height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  line-height: 24px;
+  padding-right: 8px;
+  .readmore__icon {
+    margin: auto 8px;
+    padding-right: 8px;
+  }
+  .readmore__text {
+    margin: auto 0;
+  }
+  &:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 3px;
+    box-shadow: 0 0 1px 2px $lazure;
+  }
+}
+
+.readmore__active {
+  transform: translateY(12px);
+  .readmore__icon__active {
+    transform: rotate(180deg);
+    padding-left: 8px;
+    padding-right: 0;
+  }
+}
+.article__img {
+  justify-self: center;
+  margin-left: -16px;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  @media (min-width: 768px) {
+    width: auto;
+    height: auto;
+    margin-right: 24px;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    max-width: 100%;
+    margin-bottom: auto;
+    transform: scale(auto);
+  }
+  @media (min-width: 1120px) {
+    width: 531.35px;
+    height: 307px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

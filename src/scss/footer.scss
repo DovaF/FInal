@@ -1,0 +1,67 @@
+.footer {
+  display: flex;
+  row-gap: 16px;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  position: relative;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  text-align: center;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: $grey;
+  justify-content: center;
+  padding-bottom: 19px;
+  padding-top: 16px;
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 1px;
+    background-color: $lazureLight;
+    z-index: 11;
+  }
+  @media (min-width: 768px) {
+    padding: 24px;
+    padding-top: 32px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding-bottom: 25px;
+  }
+  @media (min-width: 1120px) {
+    padding: 32px;
+    padding-bottom: 21px;
+  }
+}
+
+.footer__container {
+  width: 218px;
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+.footer__gps {
+  display: block;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+.footer__politic {
+  width: 214px;
+  flex-shrink: 0;
+}
+.footer__info {
+  max-width: 312px;
+  @media (min-width: 768px) {
+    text-align: right;
+    width: 213px;
+  }
+  @media (min-width: 1120px) {
+    text-align: right;
+    max-width: 330px;
+    width: 330px;
+  }
+}

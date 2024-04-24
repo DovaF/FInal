@@ -1,0 +1,229 @@
+.servicesPrice {
+  position: relative;
+  background-color: $whiteDirt;
+  height: 548px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  padding-bottom: 40px;
+  padding-left: 8px;
+  @media (min-width: 768px) {
+    height: auto;
+    padding-left: 24px;
+    padding-bottom: 47px;
+    row-gap: 24px;
+  }
+  @media (min-width: 1120px) {
+    padding-left: 32px;
+    row-gap: 24px;
+    padding-bottom: 50px;
+  }
+
+  .header {
+    box-sizing: border-box;
+    padding: 16px 0;
+    width: 100%;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    height: 56px;
+    letter-spacing: -0.2px;
+    font-weight: 450;
+    background: linear-gradient(90deg, $whiteDirt 1.39%, $white 100%);
+    color: hsla(230, 2%, 50%, 1);
+    text-transform: uppercase;
+    line-height: 24px;
+    @media (min-width: 1110px) {
+      padding-right: 33px;
+      display: block;
+    }
+  }
+
+  .header__container {
+    min-width: 177px;
+    justify-content: space-between;
+  }
+  .swiper {
+    height: 228px;
+    @media (min-width: 768px) {
+      height: 324px;
+      row-gap: 0;
+      margin-right: 24px;
+      background-color: $white;
+      border-radius: 10px;
+      position: static;
+      z-index: 10;
+    }
+    @media (min-width: 1120px) {
+      margin-right: 32px;
+    }
+  }
+
+  .swiper-wrapper {
+    @media (min-width: 768px) {
+      position: static;
+    }
+  }
+  .swiper__more {
+    height: auto !important;
+    overflow: auto;
+  }
+
+  .swiper::after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(
+      270deg,
+      $white 16.84%,
+      $shadowGreyTransparent 100%
+    );
+    z-index: 1;
+    right: 0;
+    width: 24px;
+    height: 200px;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .swiper .swiper-pagination {
+    top: 210px;
+  }
+
+  .price {
+    width: 260px;
+    height: 200px;
+    font-weight: 400;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $white;
+    padding: 16px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    row-gap: 16px;
+    border-radius: 10px;
+    column-gap: 106px;
+    .price__text:first-child {
+      width: 228px;
+      height: 56px;
+    }
+    @media (min-width: 768px) {
+      min-width: 720px;
+      width: 100%;
+      height: 64px;
+      padding: 16px;
+      column-gap: normal;
+      justify-content: space-between;
+      .price__text:first-child {
+        width: 348px;
+        height: auto;
+      }
+      .price__text:nth-child(2) {
+        width: 74px;
+      }
+      .price__text:nth-child(3) {
+        width: 81px;
+      }
+      &::after {
+        position: absolute;
+        width: 95%;
+        content: '';
+        height: 1px;
+        bottom: 0;
+        background-color: $greyLight;
+      }
+      &:last-child::after {
+        display: none;
+      }
+    }
+    @media (min-width: 1120px) {
+      padding: 16px 24px;
+    }
+  }
+
+  .price__text {
+    letter-spacing: 0.2px;
+    line-height: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .price__title {
+    color: $grey;
+    padding-bottom: 3px;
+    line-height: 16px;
+    display: block;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .price__link {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.15px;
+    color: $white;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    padding-left: 12px;
+    width: 119px;
+    height: 32px;
+    border-radius: 20px;
+    background: no-repeat url(../img/ic/goside.svg) 90px 3px, 0 0 $raspberry;
+    @media (min-width: 768px) {
+      position: static;
+      margin: 0;
+    }
+    &:hover {
+      transition: 0.3s;
+      box-shadow: 0 0 3px 2px $lazure;;
+      cursor: pointer;
+    }
+  }
+  .description {
+    min-width: 288px;
+    max-width: 421px;
+    margin-left: 8px;
+    margin-right: 16px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  .GetAnOffer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 30%;
+    height: 55px;
+    font-weight: 500;
+    width: 192px;
+    margin-top: 8px;
+    background: no-repeat url(../img/ic/more.svg) 90px 17px, 0 0 $whiteDirt;
+    &:hover{
+      background-position: 110px 17px;
+     }
+    @media (min-width: 520px) {
+      margin-right: 45%;
+      width: 316px;
+      height: 24px;
+      background: no-repeat url(../img/ic/more.svg) 265px -3.5px, 0 0 $whiteDirt ;
+      &:hover{
+        background-position: 290px -3.5px;;
+       }
+    }
+    @media (min-width: 768px) {
+      margin-left: 0;
+    }
+
+  }
+}
